@@ -18,11 +18,20 @@ func hi(name string) string {
 	}
 	var numbers [3]int
 	numbers[2] = 10
-	return "Hi " + name
+
+	var variable = 1
+	variable = 12
+	v := 1
+	v = 10
+
+	const hi = "Hi"
+	fmt.Println(variable, v)
+	return hi + " " + name
 }
 
 func main() {
 	fmt.Println(math.MaxInt64)
+	hi("Armando Salazar")
 
 	// TypeOf
 	fmt.Println(reflect.TypeOf(1))
