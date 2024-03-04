@@ -2,12 +2,12 @@ package gin
 
 import (
 	"fmt"
+
 	"github.com/gin-gonic/gin"
 )
 
 func Run() {
 	router := gin.Default()
-
 
 	router.GET("/ping", func(c *gin.Context) {
 		fmt.Println("[*] request here")
@@ -19,7 +19,7 @@ func Run() {
 	router.GET("/ping/v2", ping)
 
 	router.GET("/cookie", func(c *gin.Context) {
-		cookie, err := c.Cookie("gin_cookie")
+		_, err := c.Cookie("gin_cookie")
 
 		if err != nil {
 			// cookie = "NotSet"
@@ -32,7 +32,7 @@ func Run() {
 				false,
 				true,
 			)
-	
+
 		}
 
 	})
@@ -57,4 +57,3 @@ func handlerGetCookies(c *gin.Context) {
 
 	fmt.Println("[*] cookie value: ", cookie)
 }
-
