@@ -1,9 +1,8 @@
 package main
 
-import (
-	"go-base/gin"
-)
+import "go-base/gorm"
 
 func main() {
-	gin.Run()
+	// gin.Run()
+	gorm.Run()
 }
